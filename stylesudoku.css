@@ -1,0 +1,10 @@
+input{
+    height: calc(100vh / 10);
+    width: calc(100vh / 10);
+    background-color: rgb(170, 214, 212);
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    border: 1px solid gray;
+    font-size: 7vh;
+    text-align: center;
+}
