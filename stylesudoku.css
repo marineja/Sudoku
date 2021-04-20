@@ -14,7 +14,12 @@ input{
     background-color: rgb(170, 214, 212);
     appearance: textfield;
     font-size: 7vh;
-    text-align: center;
+    
+}
+table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 tr{
@@ -35,4 +40,16 @@ tr:nth-of-type(6){
 td:nth-of-type(3),
 td:nth-of-type(6){
     border-right: 1px solid black;
+}
+
+button{
+    display: block;
+    margin: 1em auto;
+    padding: .5em 2em;
+    font-size: 3vh;
+}
+
+input:invalid {
+    border: 1px solid red;
+    background-color: rgb(206, 140, 140);
 }
