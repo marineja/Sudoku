@@ -13,15 +13,31 @@ const verifier = () => {
             return
         }
     }
+// tableau qui contien toutes les lignes
+    const sudoku = []
+
 // recuperer toutes les valeurs
     for (let ligne = 0; ligne < 9; ligne += 1){
+        const sudokuLigne = []
     for (let col = 0; col < 9; col += 1){
         const identifiant = 'case' + ligne + '-' + col;
         const input = document.getElementById(identifiant);
-        console.log(identifiant);
+        const valeur = input.value
+        let nombre
+
+        if (valeur === ''){
+            nombre = ''
+        } else {
+            // si pas vide on transforme la valeur en nombre
+            nombre = parseInt(valeur, 10)
+        }
+        // ajouter valeur à la ligne
+        sudokuLigne.push(nombre)
     }
-    
+    //ajouter la ligne au sudoku
+    sudoku.push(sudokuLigne)
     }
+    console.log(sudoku);
 }
 
 
