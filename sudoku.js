@@ -37,7 +37,33 @@ const verifier = () => {
     //ajouter la ligne au sudoku
     sudoku.push(sudokuLigne)
     }
-    console.log(sudoku);
+   //verification  doublon ligne
+   //parcourir les lignes
+    for (let ligne = 0; ligne < 9; ligne += 1){
+        const liste = new Set()
+
+    // parcourir les elements de la ligne
+        for (let col = 0; col < 9; col += 1){
+            const valeur = sudoku[ligne][col]
+
+            if (valeur === '') {
+
+            } else {
+              const valeurExiste = liste.has(valeur)
+              
+              if (valeurExiste) {
+                  console.log('Erreur doublon' + ligne + '-' + col)
+                  // ajouter une classe d'erreur au champ
+                  const input = document.getElementById('case' + ligne + '-' + col)
+                  input.classList.add('invalide')
+              }  else {
+              // ajouter l'element à la liste
+                    liste.add(valeur);
+              }
+            }
+            
+        }
+    }
 }
 
 
